@@ -1,0 +1,33 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*.so
+*.pyo
+*.pyd
+
+# Jupyter Notebook checkpoints
+*.ipynb_checkpoints
+
+# Environment variables
+.env
+
+# VS Code, PyCharm, etc.
+.vscode/
+.idea/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Credentials & data
+config/*.json
+data/*.csv
+
+# Log files
+*.log
+
+# Prefect state
+.prefect/
+
+# MacOS / Linux hidden files
+*.swp
