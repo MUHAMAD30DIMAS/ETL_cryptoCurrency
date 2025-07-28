@@ -10,13 +10,14 @@ This project is an ETL (Extract, Transform, Load) pipeline for retrieving crypto
 
 ```text
 PortProject_API/
-├── extract.py
-├── transform.py
-├── load.py
-├── main.py
-├── etl_pipeline_prefect.py
+etl/
+| |── extract.py # Extracts data from CoinGecko API
+| └── transform.py # Cleans & enriches the data
+| └── load.py # Uploads data to BigQuery
+| └── main.py
+| └── etl_pipeline_prefect.py # Prefect pipeline (not yet active)
 ├── config/
-│   └── api-crypto-dashboard-xxx.json
+│   └── api-crypto-dashboard-xxx.json # GCP credentials (keep private)
 ├── data/
 │   ├── raw_crypto.csv
 │   └── clean_crypto.csv
@@ -48,6 +49,21 @@ python main.py
    Prefect orchestration tested & activated
 
    Automated scheduling via Prefect
+
+#### 📦 Requirements
+List in requirements.txt:
+```nginx
+pandas
+requests
+pandas-gbq
+google-cloud-bigquery
+google-auth
+prefect
+```
+Install with:
+```bash
+pip install -r requirements.txt
+```
 
 👨‍💻 Author
 Made with ❤️ by [Muhamad Dimas Wijaya Kesuma]
