@@ -10,12 +10,12 @@ This project is an ETL (Extract, Transform, Load) pipeline for retrieving crypto
 
 ```text
 PortProject_API/
-etl/
-| |── extract.py # Extracts data from CoinGecko API
-| └── transform.py # Cleans & enriches the data
-| └── load.py # Uploads data to BigQuery
-| └── main.py
-| └── etl_pipeline_prefect.py # Prefect pipeline (not yet active)
+├── etl/
+|   ├── extract.py # Extracts data from CoinGecko API
+|   └── transform.py # Cleans & enriches the data
+|   └── load.py # Uploads data to BigQuery
+|   └── main.py
+|   └── etl_pipeline_prefect.py # Prefect pipeline (not yet active)
 ├── config/
 │   └── api-crypto-dashboard-xxx.json # GCP credentials (keep private)
 ├── data/
